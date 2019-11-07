@@ -8,47 +8,52 @@ drw-rw-r-x. 2 amsavchenko amsavchenko 22 Nov  7 09:55 dir
 ./dir:
 total 4
 -rw-rw-r--. 1 amsavchenko amsavchenko 6 Nov  7 09:55 new_file
-    1  pwd
-    2  ls
-    3  ls -l
-    4  cd Documents
-    5  cd ..
-    6  su
-    7  history
-    8  su
+    1  clear
+    2  mkdir test
+    3  cd test
+    4  touch file
+    5  ls -l file
+    6  chmod 000 file
+    7  ls -l file
+    8  echo "test" >> file
     9  cat file
-   10  su
-   11  cat file
-   12  cd
-   13  ls
-   14  cd bos-mephi
-   15  ls
-   16  ls -lR > lab2.txt
-   17  cat lab2.txt
-   18  cd test
-   19  cd
-   20  cd test
-   21  ls -lR
-   22  ls -lR > ../bos-mephi/lab2.txt
-   23  su
-   24  cd ../bos-mephi
-   25  cat lab2.txt
-   26  history >> lab2.txt
-    1  id
-    2  whoami
-    3  exit
-    4  su
-    5  exit
-    6  ls
-    7  chown root file
-    8  chmod 000 file
-    9  chmod u+r file 
-   10  ls -l file
-   11  exit
-   12  chmod g+r file
-   13  exit
-   14  ls -lR ../bos-mephi/lab2.txt
-   15  ls -lR > ../bos-mephi/lab2.txt
-   16  exit 
-   17  history
-   18  history >> ../bos-mephi/lab2.txt
+   10  chmod u+w fiel
+   11  chmod u+w file
+   12  ls -l file
+   13  chmod g+r file
+   14  ls -l file
+   15  cat file
+   16  echo "test" >> file
+   17  chmod u+w file
+   18  ls -l file
+   19  chmod u+r file
+   20  ls -l file
+   21  cat file
+   22  mkdir dir
+   23  cd dir
+   24  touch new_file
+   25  echo "file2" >> new_file
+   26  ls
+   27  ls -l
+   28  chmod -R u-x dir
+   29  cd ..
+   30  chmod -R u-x dir
+   31  ls -l
+   32  chmod -R g-x dir
+   33  chmod  g-x dir
+   34  ls -l
+   35  cat ./dir/new_file
+   36  rm ./dir/new_file
+   37  man chown
+   38  chown root file
+   39  man chgrp
+   40  chgrp root file
+   41  man umask
+   42  umask 077
+   43  touch file1
+   44  ls -l file1
+   45  umask 000
+   46  touch file3
+   47  ls -l file3
+   48  history
+   49  history >> ../bos-mephi/lab2.txt
