@@ -1,7 +1,7 @@
 #!/bin/bash
 file="lab5.out"
 ps -eo euid,ruid,comm | tail -n +2  >"$file"
-exec 0<lab5.out # связываем дескриптор 0 с файлом в который записали
+exec 0<"$file" # связываем дескриптор 0 с файлом в который записали
 
 while read euid ruid name 
 do
@@ -11,4 +11,4 @@ do
 	
 
 done
-rm lab5.out
+rm "$file"
